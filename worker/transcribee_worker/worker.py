@@ -328,7 +328,7 @@ class Worker:
                 try:
                     self.keepalive(task_id, self.progress)
                 except Exception as exc:
-                    logging.error("Keepliave failed", exc_info=exc)
+                    logging.error("Keepalive failed", exc_info=exc)
                 await asyncio.sleep(seconds)
 
         task = asyncio.create_task(_work())
